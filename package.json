@@ -1,0 +1,47 @@
+{
+  "name": "dsi-prct12-individual",
+  "version": "1.0.0",
+  "description": "> **Nombre:** Iván García González **Correo:** alu0101388786@ull.edu.es <p align=\"center\">   <a href='https://coveralls.io/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-Ivan-Garcia02?branch=main'>     <img src='https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct10-fs-proc-sockets-funko-app-Ivan-Garcia02/badge.svg?branch=main' alt='Coverage Status'>   </a>",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "c8 npm test && c8 report --reporter=lcov",
+    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "doc": "typedoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ivan-Garcia02/dsi-practica-12-Individual.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ivan-Garcia02/dsi-practica-12-Individual.git"
+  },
+  "homepage": "https://github.com/Ivan-Garcia02/dsi-practica-12-Individual.git",
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/express": "^4.17.17",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.11",
+    "@types/request": "^2.48.8",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "c8": "^7.13.0",
+    "chai": "^4.3.7",
+    "eslint": "^8.38.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.1",
+    "tsc-watch": "^6.0.0",
+    "typedoc": "^0.24.4",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^5.3.0",
+    "request": "^2.88.2"
+  }
+}
