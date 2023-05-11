@@ -1,33 +1,18 @@
-/**
- * Funcion simple Hola Mundo
- * @param cadena Cadena de Texto
- * @returns cadena
- */
-export function holaMundo(cadena: string) : string {
-  return cadena;
-}
+// sudo /home/usuario/mongodb/bin/mongod --dbpath /home/usuario/mongodb-data/
+import express from 'express';
+import './db/mongoose.js';
+import { defaultRouter } from './routers/default.js';
+import { userRouter } from './routers/usuario.js';
+import { productRouter } from './routers/producto.js';
 
-/*import { MongoClient } from 'mongodb';
+const app = express();
+app.use(express.json());
+app.use(userRouter);
+app.use(productRouter);
+app.use(defaultRouter);
 
-const dbURL = 'mongodb://127.0.0.1:27017';
-const dbName = 'notes-app';
+const port = process.env.PORT || 3000;
 
-interface NoteInterface {
-  title: string,
-  body: string,
-  color: 'blue' | 'green' | 'red' | 'yellow' | 'magenta'
-}
-
-MongoClient.connect(dbURL).then((client) => {
-  const db = client.db(dbName);
-
-  return db.collection<NoteInterface>('notes').insertOne({
-    title: 'Red note',
-    body: 'This is a red note',
-    color: 'red',
-  });
-}).then((result) => {
-  console.log(result);
-}).catch((error) => {
-  console.log(error);
-});*/
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`);
+});
